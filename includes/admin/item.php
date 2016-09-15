@@ -19,7 +19,7 @@ if(is_array($c_row))
 
 $sql = "SELECT COUNT(id) FROM ".$wpdb->prefix."cis_images";
 $count_items = $wpdb->get_var($sql);
-if($id == 0 && $count_items >= 5) {
+if(False) { //$id == 0 && $count_items >= 5) {
 	?>
 	<div style="color: rgb(235, 9, 9);font-size: 16px;font-weight: bold;">Please Upgrade to Commercial Version to have more than 5 Creative Items!</div>
 	<div id="cpanel" style="float: left;">

@@ -17,8 +17,8 @@ if(is_array($c_row))
 
 $sql = "SELECT COUNT(id) FROM ".$wpdb->prefix."cis_sliders";
 $count_sliders = $wpdb->get_var($sql);
-if($id == 0 && $count_sliders >= 1) {
-	?>
+if(False) { //$id == 0 && $count_sliders >= 1) {
+?>
 	<div style="color: rgb(235, 9, 9);font-size: 16px;font-weight: bold;">Please Upgrade to Commercial Version to have more than one Creative Slider!</div>
 	<div id="cpanel" style="float: left;">
 		<div class="icon" style="float: right;">
@@ -40,13 +40,13 @@ if($id == 0 && $count_sliders >= 1) {
 else {
 //********************************************************************DEFAULTS *****************************************************************************************-
 $slider_global_options = Array();
-$slider_global_options["showreadmore"] = 1;
+$slider_global_options["showreadmore"] = 0;
 $slider_global_options["readmoretext"] = 'View Image';
 $slider_global_options["readmorestyle"] = 'blue';
 $slider_global_options["readmoreicon"] = 'picture';
 $slider_global_options["readmoresize"] = 'mini';
 $slider_global_options["overlaycolor"] = '#000000';
-$slider_global_options["overlayopacity"] = 50;
+$slider_global_options["overlayopacity"] = 0;
 $slider_global_options["textcolor"] = '#ffffff';
 $slider_global_options["overlayfontsize"] = 17;
 $slider_global_options["textshadowcolor"] = '#000000';
@@ -57,12 +57,13 @@ $slider_global_options["readmoremargin"] = '0px 15px 10px 10px';
 $slider_global_options["captionmargin"] = '10px 15px 10px 15px';
 
 //slider options
-$slider_global_options["height"] = 250;
-$slider_global_options["itemsoffset"] = 2;
+$slider_global_options["bgcolor"] = "#ffffff";
+$slider_global_options["height"] = 300;
+$slider_global_options["itemsoffset"] = 8;
 $slider_global_options["margintop"] = 0;
 $slider_global_options["marginbottom"] = 0;
-$slider_global_options["paddingtop"] = 2;
-$slider_global_options["paddingbottom"] = 2;
+$slider_global_options["paddingtop"] = 8;
+$slider_global_options["paddingbottom"] = 8;
 
 $slider_global_options["showarrows"] = 1;//on hover
 $slider_global_options["arrow_template"] = 26;
@@ -73,17 +74,17 @@ $slider_global_options["arrow_passive_opacity"] = 50;
 
 $slider_global_options["move_step"] = 600;
 $slider_global_options["move_time"] = 600;
-$slider_global_options["move_ease"] = 60;
-$slider_global_options["autoplay"] = 1;
+$slider_global_options["move_ease"] = 0;
+$slider_global_options["autoplay"] = 0;
 $slider_global_options["autoplay_start_timeout"] = 5000;
 $slider_global_options["autoplay_hover_timeout"] = 2000;
 $slider_global_options["autoplay_step_timeout"] = 1000;
 $slider_global_options["autoplay_evenly_speed"] = 25;
 
-$slider_global_options["overlayanimationtype"] = 0;
+$slider_global_options["overlayanimationtype"] = 1;
 $slider_global_options["popup_max_size"] = 90;
 $slider_global_options["popup_item_min_width"] = 300;
-$slider_global_options["popup_use_back_img"] = 1;
+$slider_global_options["popup_use_back_img"] = 0;
 $slider_global_options["popup_arrow_passive_opacity"] = 50;
 $slider_global_options["popup_arrow_left_offset"] = 12;
 $slider_global_options["popup_arrow_min_height"] = 25;
@@ -94,10 +95,10 @@ $slider_global_options["popup_image_order_top_offset"] = 12;
 $slider_global_options["popup_show_orderdata"] = 1;
 $slider_global_options["popup_icons_opacity"] = 50;
 $slider_global_options["popup_show_icons"] = 1;
-$slider_global_options["popup_autoplay_default"] = 1;
+$slider_global_options["popup_autoplay_default"] = 0;
 $slider_global_options["popup_closeonend"] = 1;
 $slider_global_options["popup_autoplay_time"] = 5000;
-$slider_global_options["popup_open_event"] = 0;
+$slider_global_options["popup_open_event"] = 1;
 ?>
 <!-- ********************************************************************JACASCRIPT ************************************************************************************* -->
 
@@ -1069,8 +1070,8 @@ $slider_global_options["popup_open_event"] = 0;
 							<div style="clear: both;height: 5px;"></div>
 							<div class="cis_control_label"><label style="margin-top: 4px;" id="" for="cis_bgcolor" class="hasTooltip" title="<?php echo $slider_dictionary[ 'COM_CREATIVEIMAGESLIDER_BGCOLOR_LABEL' ];?>" ><?php echo $slider_dictionary[ 'COM_CREATIVEIMAGESLIDER_BGCOLOR_DESCRIPTION' ];?></label></div>
 							<div class="cis_controls">
-								<div id="colorSelector" class="colorSelector" style="float: left;"><div style="background-color: <?php echo $v = $id == 0 ? '#000000' : $row->bgcolor;?>"></div></div>
-               					<input class="colorSelector" type="text" value="<?php echo $v = $id == 0 ? '#000000' : $row->bgcolor;?>" name="bgcolor" roll=""  id="cis_bgcolor" style="width: 162px;margin: 4px 0 0 6px;" />
+								<div id="colorSelector" class="colorSelector" style="float: left;"><div style="background-color: <?php echo $v = $id == 0 ? $slider_global_options['bgcolor'] : $row->bgcolor;?>"></div></div>
+                                <input class="colorSelector" type="text" value="<?php echo $v = $id == 0 ? $slider_global_options['bgcolor'] : $row->bgcolor;?>" name="bgcolor" roll=""  id="cis_bgcolor" style="width: 162px;margin: 4px 0 0 6px;" />
 							</div>
 							
 							<div style="clear: both;height: 5px;"></div>
