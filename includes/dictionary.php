@@ -267,17 +267,4 @@ $slider_dictionary['COM_CREATIVEIMAGESLIDER_POPUP_IMAGE_LABEL'] = "Popup Image";
 $slider_dictionary['COM_CREATIVEIMAGESLIDER_POPUP_IMAGE_DESCRIPTION'] = "Upload popup image. If empty, main item image will be used.";
 $slider_dictionary['COM_CREATIVEIMAGESLIDER_POPUP_IMGURL_LABEL'] = "Popup Image URL";
 $slider_dictionary['COM_CREATIVEIMAGESLIDER_POPUP_IMGURL_DESCRIPTION'] = "Load image from WEB. Use when Popup Image is empty. If empty, main item image will be used.";
-
-$slider_dictionary['COM_CREATIVEIMAGESLIDER_OVERLAY_STATE_2'] = "Overlay Option inactive state";
-$slider_dictionary['COM_CREATIVEIMAGESLIDER_LABEL_STATE_2'] = "Label Parameters inactive state";
-
-$slider_dictionary['COM_CREATIVEIMAGESLIDER_MAX_LIMIT_MESSAGE_LABEL'] = "The max limit exceeded!";
-$slider_dictionary['COM_CREATIVEIMAGESLIDER_MAX_LIMIT_MESSAGE_DESCRIPTION'] = "Use global congigration valuse";
-
-$slider_dictionary['COM_CREATIVEIMAGESLIDER_NUM_IMAGES_ROW'] = "Items Per Row";
-
-$slider_dictionary['COM_CREATIVEIMAGESLIDER_IMG_MAX_SIZE'] = "Please select max image size";
-$slider_dictionary['COM_CREATIVEIMAGESLIDER_IMG_MIN_SIZE'] = "Please select min image size";
-
-
 ?>

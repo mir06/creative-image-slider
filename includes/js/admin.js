@@ -100,48 +100,11 @@ $(document).ready(function() {
 			alert('Please first make a selection from the list');
 			return false;
 		}
-	});	
-	//delete all task * Extra rule
-	$("#wpcis_delete_all").click(function(e) {
-		e.preventDefault();
-		var l = parseInt($('.wpcis_row_ch:checked').length);
-		if(l > 0) {
-			if(confirm('Delete selected items?')) {
-				$("#wpcis_task").val('delete');
-				$("#wpcis_form").submit();
-			}
-			return false;
-		}
-		else {
-			alert('Please first make a selection from the list');
-			return false;
-		}
-	});
-
-	//re-create list task // extra rule
-	$("#wpcis_recreate").click(function(e) {
-		e.preventDefault();
-		var l = parseInt($('.wpcis_recreate:checked').length);
-		if(l > 0) {
-			var id = $('.wpcis_recreate:checked').first().val();
-			var url_part1 =$("#wpcis_form").attr("action");
-			var url = url_part1 + '&act=edit&id=' + id;
-			window.location.replace(url);
-			return false;
-		}
-		else {
-			alert('Please first make a selection from the list');
-			return false;
-		}
 	});
 	
 	
 	//filter select
 	$(".wpcis_select").change(function() {
-		$("#wpcis_form").submit();
-	});
-	//filter select
-	$(".wpcis_select_added").change(function() {
 		$("#wpcis_form").submit();
 	});
 	//filter search
@@ -248,18 +211,6 @@ $(document).ready(function() {
 		else
 			return false;
 	};
-
-	//move all elements
-	$("#wpcis_move_all").click(function() {
-		if($(this).is(":checked")) {
-			$('.wpcis_row_ch').attr('checked',true);
-		}
-		else {
-			$('.wpcis_row_ch').attr('checked',false);
-		}
-		
-		wpcis_check_the_selection();
-	});
 	
 	//////////////////////////////////////////////////Table list sortable///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	var wpcis_selected_tr_id = 0;
