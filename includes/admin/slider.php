@@ -57,7 +57,7 @@ $slider_global_options["readmoremargin"] = '0px 15px 10px 10px';
 $slider_global_options["captionmargin"] = '10px 15px 10px 15px';
 
 //slider options
-$slider_global_options["bgcolor"] = "#ffffff";
+$slider_global_options["bgcolor"] = "#f0f8ff";
 $slider_global_options["height"] = 300;
 $slider_global_options["itemsoffset"] = 8;
 $slider_global_options["margintop"] = 0;
