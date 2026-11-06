@@ -18,14 +18,12 @@ $cat_options = [];
 if (is_array($c_row)) {
     foreach ($c_row as $arr) {
         $cat_options[$arr->id] = $arr->name;
-    };
+    }
 }
 
 $sql = "SELECT COUNT(id) FROM " . $wpdb->prefix . "cis_sliders";
 $count_sliders = $wpdb->get_var($sql);
-if (false) {<?php
-    //$id == 0 && $count_sliders >= 1) {
-    ?>
+if (false) { ?>
 	<div style="color: rgb(235, 9, 9);font-size: 16px;font-weight: bold;">Please Upgrade to Commercial Version to have more than one Creative Slider!</div>
 	<div id="cpanel" style="float: left;">
 		<div class="icon" style="float: right;">
@@ -2924,7 +2922,7 @@ if (false) {<?php
         } else {
             for ($i = 0, $n = count($rows); $i < $n; $i++) {
                 $slider_options[$rows[$i]->slider_id][] = $rows[$i];
-            };
+            }
         }
 
         if (sizeof($rows) != 0 && sizeof($slider_options) > 0) { ?>
